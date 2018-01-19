@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<!-- saved from url= -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+<title>中桥广告--您身边的本地宝</title>
+    <link href="css/common.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
+</head>
+
+
+<script>
+   //list收缩效果
+    $(function(){
+        // nav收缩展开
+        $('.navMenu li a').on('click',function(){
+            var parent = $(this).parent().parent();//获取当前页签的父级的父级
+            var labeul =$(this).parent("li").find(">ul")
+            if ($(this).parent().hasClass('open') == false) {
+                //展开未展开
+                parent.find('ul').slideUp(300);
+                parent.find("li").removeClass("open")
+                parent.find('li a').removeClass("active").find(".arrow").removeClass("open")
+                $(this).parent("li").addClass("open").find(labeul).slideDown(300);
+                $(this).addClass("active").find(".arrow").addClass("open")
+            }else{
+                $(this).parent("li").removeClass("open").find(labeul).slideUp(300);
+                if($(this).parent().find("ul").length>0){
+                    $(this).removeClass("active").find(".arrow").removeClass("open")
+                }else{
+                    $(this).addClass("active")
+                }
+            }
+
+        });
+    });
+
+</script>
+
+<body>
+    <div class="body_container">
+        <div class="header">
+            <ul>
+                <li class="area"><a href="index.html">池北区</a></li>
+                <li class="search"><input type="text" value="找工作 找房子"></li>
+                <li class="issue"><img src="images/issue.png"><a>发布</a></li>
+            </ul>
+        </div>
+        <div class="classify">
+            <ul>
+                <li>
+                    <a href="advertis-list.html">
+                        <span class="classify-img"><img src="images/work.png"></span>
+                        <span class="classify-desc">招聘</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="house-list.html">
+                        <span class="classify-img"><img src="images/houses.png"></span>
+                        <span class="classify-desc">房产</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="cart-list">
+                        <span class="classify-img"><img src="images/care.png"></span>
+                        <span class="classify-desc">汽车</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="shopping-list">
+                        <span class="classify-img"><img src="images/shopping.png"></span>
+                        <span class="classify-desc">购物</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="news-list.html">
+                        <span class="classify-img"><img src="images/news.png"></span>
+                        <span class="classify-desc">读报</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="old-list">
+                        <span class="classify-img"><img src="images/exchange.png"></span>
+                        <span class="classify-desc">二手</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="local-list">
+                        <span class="classify-img"><img src="images/address.png"></span>
+                        <span class="classify-desc">本地宝</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="pets-list">
+                        <span class="classify-img"><img src="images/pet.png"></span>
+                        <span class="classify-desc">宠物</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="homemaking-list.html">
+                        <span class="classify-img"><img src="images/homemaking.png"></span>
+                        <span class="classify-desc">家政</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="news">
+            <div class="tit"><span>中桥快讯</span></div>
+            <div class="shell">
+                <div id="div1">
+                    <a href="javascript:">1内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一</a>
+                    <a href="javascript:">2内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一</a>
+                    <a href="javascript:">3内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一</a>
+                    <a href="javascript:">4内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一内容一</a>
+                </div>
+            </div>
+            <script>
+                var box=document.getElementById("div1"),can=true;
+                box.innerHTML+=box.innerHTML;
+                box.onmouseover=function(){can=false};
+                box.onmouseout=function(){can=true};
+                new function (){
+                    var stop=box.scrollTop%18==0&&!can;
+                    if(!stop)box.scrollTop==parseInt(box.scrollHeight/2)?box.scrollTop=0:box.scrollTop++;
+                    setTimeout(arguments.callee,box.scrollTop%18?10:1500);
+                };
+            </script>
+        </div>
+    </div>
+
+
+        <div class="advert-index">
+            <div class="swiper-container swiper-container-horizontal">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide-active"><img src="images/yirendai.jpg" width="100%"/></div>
+                    <div class="swiper-slide swiper-slide-next"><img src="images/yirendai.jpg" width="100%"/></div>
+                    <div class="swiper-slide"><img src="images/yirendai.jpg" width="100%"/></div>
+                    <div class="swiper-slide"><img src="images/yirendai.jpg" width="100%"/></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-bullets-dynamic">
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active-next"></span>
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active-next-next"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                </div>
+            </div>
+            <!-- Swiper JS -->
+            <script>
+                var swiper = new Swiper('.swiper-container', {
+                    pagination: {
+                        el: '.swiper-pagination',
+                        dynamicBullets: true
+                    },
+                    autoplay: {
+                        delay: 5000,
+                        stopOnLastSlide: false,
+                        disableOnInteraction: true
+                    }
+                });
+            </script>
+        </div>
+        <div class="list">
+            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: 100%; height: 100%;">
+                <div id="slimtest1" style="overflow: hidden; width: 100%; height: 100%;">
+                    <ul class="navMenu">
+                        <li class="open">
+                            <a href="javascript:;" class="afinve">
+                                <span class="">招聘</span>
+                            </a>
+                            <a class="more" href="advertis-list.html" >更多…</a>
+
+                            <ul class="sub-menu" style="display: block;">
+                                <li>
+                                    <a href="index22.html;">
+                                        <div class="up">
+                                            <dl>
+                                                <dd>排版员<span>供午饭</span><span>年底双薪</span></dd>
+                                                <dd><em>1800-2400</em><strong>2017-12-20</strong></dd>
+                                            </dl>
+                                        </div>
+                                        <div>
+                                            <img src="images/address.png" width="20"><span>长白山保护开发区兄弟广告有限公司</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index22.html;">
+                                        <div class="up">
+                                            <dl>
+                                                <dd>排版员<span>供午饭</span><span>年底双薪</span></dd>
+                                                <dd><em>1800-2400</em><strong>2017-12-20</strong></dd>
+                                            </dl>
+                                        </div>
+                                        <div>
+                                            <img src="images/address.png" width="20"><span>长白山保护开发区兄弟广告有限公司</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index22.html;">
+                                        <div class="up">
+                                            <dl>
+                                                <dd>排版员<span>供午饭</span><span>年底双薪</span></dd>
+                                                <dd><em>1800-2400</em><strong>2017-12-20</strong></dd>
+                                            </dl>
+                                        </div>
+                                        <div>
+                                            <img src="images/address.png" width="20"><span>长白山保护开发区兄弟广告有限公司</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index22.html;">
+                                        <div class="up">
+                                            <dl>
+                                                <dd>排版员<span>供午饭</span><span>年底双薪</span></dd>
+                                                <dd><em>1800-2400</em><strong>2017-12-20</strong></dd>
+                                            </dl>
+                                        </div>
+                                        <div>
+                                            <img src="images/address.png" width="20"><span>长白山保护开发区兄弟广告有限公司</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="javascript:;" class="afinve">
+                                <span class="">房产</span>
+                            </a>
+                            <a class="more" href="house-list.html" >更多…</a>
+
+                            <ul class="sub-menu" style="display: none;">
+                                <li>
+                                    <a href="house-details.html">
+                                        <div class="up">
+                                            <dl>
+                                                <dd>三室一厅一厨一卫<span>新装修</span><span>不把山</span></dd>
+                                                <dd><em>1800</em><em>元/月</em><strong>2017-12-20</strong></dd>
+                                            </dl>
+                                        </div>
+                                        <div>
+                                            <img src="images/address.png" width="20"><span>常青小区3号楼34栋5楼中门</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index22.html;">
+                                        <div class="up">
+                                            <dl>
+                                                <dd>三室一厅一厨一卫<span>新装修</span><span>不把山</span></dd>
+                                                <dd><em>1800</em><em>元/月</em><strong>2017-12-20</strong></dd>
+                                            </dl>
+                                        </div>
+                                        <div>
+                                            <img src="images/address.png" width="20"><span>常青小区3号楼34栋5楼中门</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index22.html;">
+                                        <div class="up">
+                                            <dl>
+                                                <dd>三室一厅一厨一卫<span>新装修</span><span>不把山</span></dd>
+                                                <dd><em>1800</em><em>元/月</em><strong>2017-12-20</strong></dd>
+                                            </dl>
+                                        </div>
+                                        <div>
+                                            <img src="images/address.png" width="20"><span>常青小区3号楼34栋5楼中门</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index22.html;">
+                                        <div class="up">
+                                            <dl>
+                                                <dd>三室一厅一厨一卫<span>新装修</span><span>不把山</span></dd>
+                                                <dd><em>1800</em><em>元/月</em><strong>2017-12-20</strong></dd>
+                                            </dl>
+                                        </div>
+                                        <div>
+                                            <img src="images/address.png" width="20"><span>常青小区3号楼34栋5楼中门</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="javascript:;" class="afinve">
+                                <span class="">报纸</span>
+                            </a>
+                            <a class="more" href="news-list.html" >更多…</a>
+
+                            <ul class="sub-menu" style="display: none;">
+                                <li>
+                                    <a href="news-details.html">
+                                        <div class="up no-dotted">第1期<strong>2017-12-29</strong></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="news-details.html">
+                                        <div class="up no-dotted">第99期<strong>2017-12-22</strong></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="news-details.html">
+                                        <div class="up no-dotted">第98期<strong>2017-12-15</strong></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="news-details.html">
+                                        <div class="up no-dotted">第97期<strong>2017-12-08</strong></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="javascript:;" class="afinve">
+                                <span class="">家政</span>
+                            </a>
+                            <a class="more" href="homemaking-list.html" >更多…</a>
+
+                            <ul class="sub-menu" style="display: none;">
+                                <li>
+                                    <a href="homemaking-details.html">
+                                        <div class="up">
+                                            <dl>
+                                                <dd>小梅家政服务中心<span>价格合理</span><span>干净利索</span></dd>
+                                                <dd><img src="images/phone.png" style="margin-right: 10px">13512345678</dd>
+                                            </dl>
+                                        </div>
+                                        <div>
+                                            <img src="images/address.png" width="20"><span>二道中心街里行500米</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="homemaking-details.html">
+                                        <div class="up">
+                                            <dl>
+                                                <dd>小梅家政服务中心<span>价格合理</span><span>干净利索</span></dd>
+                                                <dd><img src="images/phone.png" style="margin-right: 10px">13512345678</dd>
+                                            </dl>
+                                        </div>
+                                        <div>
+                                            <img src="images/address.png" width="20"><span>二道中心街里行500米</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="homemaking-details.html">
+                                        <div class="up">
+                                            <dl>
+                                                <dd>小梅家政服务中心<span>价格合理</span><span>干净利索</span></dd>
+                                                <dd><img src="images/phone.png" style="margin-right: 10px">13512345678</dd>
+                                            </dl>
+                                        </div>
+                                        <div>
+                                            <img src="images/address.png" width="20"><span>二道中心街里行500米</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="homemaking-details.html">
+                                        <div class="up">
+                                            <dl>
+                                                <dd>小梅家政服务中心<span>价格合理</span><span>干净利索</span></dd>
+                                                <dd><img src="images/phone.png" style="margin-right: 10px">13512345678</dd>
+                                            </dl>
+                                        </div>
+                                        <div>
+                                            <img src="images/address.png" width="20"><span>二道中心街里行500米</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+</html>

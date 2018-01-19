@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- saved from url= -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+<title>招聘详情</title>
+<head>
+    <link href="css/common.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="header col">
+        <a href="javascript:history.back(-1)" class="back"><img src="images/back.png"></a>
+        <input type="button" value="申请" class="but f-r col-but">
+    </div>
+
+    <div class="box">
+        <div class="information">
+            <dl>
+                <dt><strong>排版员</strong><em>发布：2017-12-21 &nbsp;浏览：22</em></dt>
+                <dd><em>1800-2100</em></dd>
+                <dd><span>包吃</span><span>包住</span><span>年底双薪</span></dd>
+            </dl>
+        </div>
+        <div class="content">
+            <h3>职位描述</h3>
+            <table>
+                <tr>
+                    <th>职位：</th><td>排版员</td>
+                </tr>
+                <tr>
+                    <th>福利：</th><td>包吃包住年底双薪</td>
+                </tr>
+                <tr>
+                    <th>描述：</th><td>报纸的排版，领导交办的其他事项</td>
+                </tr>
+                <tr>
+                    <th>要求：</th><td>会基本的PS、CDR，有一定空间审美</td>
+                </tr>
+                <tr>
+                    <th>联系电话：</th><td>13512345678</td>
+                </tr>
+                <tr>
+                    <th>联系人：</th><td>陈先生</td>
+                </tr>
+                <tr>
+                    <th>地址：</th><td>二道中心街内行300米天悦府旁</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="banner-bottom">
+        <div class="swiper-container swiper-container-horizontal">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-slide-active"><img src="images/yirendai.jpg" width="100%"/></div>
+                <div class="swiper-slide swiper-slide-next"><img src="images/yirendai.jpg" width="100%"/></div>
+                <div class="swiper-slide"><img src="images/yirendai.jpg" width="100%"/></div>
+                <div class="swiper-slide"><img src="images/yirendai.jpg" width="100%"/></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-bullets-dynamic">
+                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                <span class="swiper-pagination-bullet swiper-pagination-bullet-active-next"></span>
+                <span class="swiper-pagination-bullet swiper-pagination-bullet-active-next-next"></span>
+                <span class="swiper-pagination-bullet"></span>
+            </div>
+        </div>
+        <!-- Swiper JS -->
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination',
+                    dynamicBullets: true
+                },
+                autoplay: {
+                    delay: 5000,
+                    stopOnLastSlide: false,
+                    disableOnInteraction: true
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>
